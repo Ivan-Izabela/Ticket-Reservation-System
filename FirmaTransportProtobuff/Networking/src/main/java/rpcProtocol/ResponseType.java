@@ -1,0 +1,6 @@
+package rpcProtocol;
+
+
+public enum ResponseType {
+    OK, ERROR,GET_FILTERED_CURSE,SAVE_REZERVARE,SAVED_REZERVARE, GET_ALL_CURSE,GET_REZERVARE_DTO;;
+}

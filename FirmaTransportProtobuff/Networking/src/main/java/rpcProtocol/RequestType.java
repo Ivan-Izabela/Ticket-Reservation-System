@@ -1,0 +1,6 @@
+package rpcProtocol;
+
+
+public enum RequestType {
+    LOGIN, LOGOUT, GET_FILTERED_CURSE,SAVE_REZERVARE,GET_ALL_CURSE,GET_REZERVARE_DTO;
+}

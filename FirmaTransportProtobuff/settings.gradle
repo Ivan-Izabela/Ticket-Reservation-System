@@ -1,0 +1,8 @@
+rootProject.name = 'FirmaTransportProtobuff'
+include 'Model'
+include 'Persistance'
+include 'Services'
+include 'Networking'
+include 'Server'
+include 'Client'
+

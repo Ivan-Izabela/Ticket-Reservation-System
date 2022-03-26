@@ -1,0 +1,68 @@
+syntax="proto3";
+package ft.protocol;
+
+option java_package = "protobuffprotocol";
+option java_outer_classname = "FTProtobufs";
+
+
+message Oficiu{
+  string id=1;
+  string nume=2;
+  string parola=3;
+}
+
+
+message Cursa{
+  string id=1;
+  string destinatie=2;
+  string plecare=3;
+  string locuriDisponibile=4;
+}
+
+message Rezervare{
+  string id=1;
+  string numeClient=2;
+  string nrLocuri=3;
+  string idCursa=4;
+}
+
+message RezervareDTO{
+  string numeClient=1;
+  string nrLoc=2;
+}
+
+message Request{
+  enum Type{Unknown=0; LOGIN=1; LOGOUT=2; GET_FILTERED_CURSE=3; SAVE_REZERVARE=4; GET_ALL_CURSE=5; GET_REZERVARE_DTO=6;}
+
+  // Identifies which request is filled in.
+  Type type = 1;
+
+  // One of the following will be filled in, depending on the type.
+  oneof payload{
+    Oficiu oficiu=2;
+    Cursa cursa=3;
+    Rezervare rezervare=4;
+    RezervareDTO rezervareDTO=5;
+
+  }
+
+}
+
+message Response{
+  enum Type{Unknown=0; Ok = 1; Error = 2; GET_FILTERED_CURSE=3; SAVE_REZERVARE=4; SAVED_REZERVARE=5; GET_ALL_CURSE=6; GET_REZERVARE_DTO=7;}
+
+  // Identifies which request is filled in.
+  Type type = 1;
+
+  // One of the following will be filled in, depending on the type.
+  string error = 2;
+  Oficiu oficiu=3;
+  repeated Cursa curse=4;
+  Cursa cursa=5;
+  Rezervare rezervare=6;
+  repeated Rezervare rezervari=7;
+  RezervareDTO rezervareDTO=8;
+  repeated RezervareDTO rezervariDTO=9;
+
+
+}
