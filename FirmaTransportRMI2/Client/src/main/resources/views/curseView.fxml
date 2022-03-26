@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.CurseController">
+   <children>
+      <TableView fx:id="curseTable" layoutX="23.0" layoutY="28.0" prefHeight="200.0" prefWidth="222.0">
+        <columns>
+          <TableColumn fx:id="destinatieTableColumn" prefWidth="75.0" text="Destinatie" />
+          <TableColumn fx:id="dataTableColumn" prefWidth="75.0" text="Data" />
+            <TableColumn fx:id="locuriTableColumn" prefWidth="75.0" text="Locuri" />
+        </columns>
+      </TableView>
+      <Label layoutX="340.0" layoutY="28.0" text="Destinatie" />
+      <TextField fx:id="destCautareTableField" layoutX="408.0" layoutY="24.0" onKeyTyped="#handleFindBYDestinatie" />
+      <Button layoutX="325.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleDetaliiCursa" text="Detalii Cursa" />
+      <TableView fx:id="rezervareDtoTable" layoutX="424.0" layoutY="72.0" prefHeight="200.0" prefWidth="149.0">
+        <columns>
+          <TableColumn fx:id="clientTableColumn" prefWidth="75.0" text="Client" />
+          <TableColumn fx:id="locuriDtoTableColumn" prefWidth="75.0" text="Nr. Loc" />
+        </columns>
+      </TableView>
+      <Label layoutX="51.0" layoutY="272.0" text="Nume" />
+      <Label layoutX="32.0" layoutY="307.0" text="Nr. Locuri" />
+      <TextField fx:id="numeRezervareTextField" layoutX="96.0" layoutY="268.0" />
+      <TextField fx:id="locuriRezervareTextField" layoutX="96.0" layoutY="303.0" />
+      <Button layoutX="134.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleRezervare" text="Rezerva" />
+      <Button layoutX="521.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+   </children>
+</AnchorPane>
