@@ -1,0 +1,8 @@
+rootProject.name = 'FirmaTransportSockets'
+include 'Model'
+include 'Persistance'
+include 'Services'
+include 'Server'
+include 'Client'
+include 'Networking'
+

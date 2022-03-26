@@ -1,0 +1,10 @@
+ft/services/rest/ServiceException.java
+ ft.services.rest.ServiceException
+rest/CurseClient.java
+ rest.CurseClient
+ft/services/rest/CursaController.java
+ ft.services.rest.CursaController
+start/StartRestServices.java
+ start.StartRestServices
+start/StartRestClient.java
+ start.StartRestClient
